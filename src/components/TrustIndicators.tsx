@@ -1,68 +1,95 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Users, TrendingUp, Globe } from "lucide-react";
+import { Star, TrendingUp, DollarSign, Users, Target } from "lucide-react";
 
 const TrustIndicators = () => {
   const stats = [
     {
       icon: Users,
-      number: "50,000+",
-      label: "Happy Investors",
-      description: "Clients worldwide who trust our expertise"
+      number: "66+",
+      label: "Agencies Served",
+      description: "Real estate agencies trust our proven system"
+    },
+    {
+      icon: DollarSign,
+      number: "1B+ AED",
+      label: "Sales Generated",
+      description: "Total sales volume from our lead system"
+    },
+    {
+      icon: Target,
+      number: "3x",
+      label: "Better Qualified",
+      description: "Lead quality compared to traditional methods"
     },
     {
       icon: TrendingUp,
-      number: "95%",
-      label: "Success Rate",
-      description: "Of our leads convert to actual investments"
-    },
-    {
-      icon: Globe,
-      number: "50+",
-      label: "Countries",
-      description: "We serve investors from around the world"
-    },
-    {
-      icon: Star,
-      number: "4.9/5",
-      label: "Client Rating",
-      description: "Average satisfaction score from our clients"
+      number: "40%",
+      label: "Lower Cost",
+      description: "Reduced cost per qualified lead"
     }
   ];
 
   const testimonials = [
     {
-      name: "Ahmed Al Mansouri",
-      location: "Saudi Arabia",
-      text: "Found my dream property in Downtown Dubai within 2 weeks. Excellent service!",
-      rating: 5
+      name: "Ahmed Hassan",
+      company: "Dubai Properties Elite",
+      location: "Dubai Marina",
+      text: "We went from 50 unqualified leads to 150 hot prospects monthly. Our conversion rate increased by 300%!",
+      rating: 5,
+      result: "300% conversion increase"
     },
     {
-      name: "Sarah Johnson",
-      location: "United Kingdom", 
-      text: "Professional team that understands international investors. Highly recommended!",
-      rating: 5
+      name: "Sarah Al Zahra",
+      company: "Emirates Real Estate Group", 
+      location: "Downtown Dubai",
+      text: "Kratos strategy completely transformed our business. We're now closing 40% more deals with half the effort.",
+      rating: 5,
+      result: "40% more closings"
     },
     {
-      name: "Raj Patel",
-      location: "India",
-      text: "Best ROI on my Dubai property investment. Thank you LeadCare UAE!",
-      rating: 5
+      name: "Mohammad Khan",
+      company: "Premium Properties UAE",
+      location: "Business Bay",
+      text: "Best investment we ever made. ROI was 500% in the first 3 months. Highly recommend LeadCare UAE!",
+      rating: 5,
+      result: "500% ROI in 3 months"
     }
+  ];
+
+  const agencies = [
+    "Dubai Properties Elite",
+    "Emirates Real Estate Group", 
+    "Premium Properties UAE",
+    "Golden Gate Realty",
+    "Skyline Properties",
+    "Marina Real Estate",
+    "Business Bay Holdings",
+    "Palm Properties LLC"
   ];
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        {/* Stats Section */}
+        {/* Trusted By Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Trusted by Investors Worldwide
+            Trusted By Tens Of Real Estate Agencies
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Our track record speaks for itself
+          <p className="text-xl text-muted-foreground mb-8">
+            Join the agencies already dominating Dubai real estate with our proven system
           </p>
+          
+          {/* Agency Names Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {agencies.map((agency, index) => (
+              <div key={index} className="text-center py-4 px-2 bg-secondary rounded-lg">
+                <span className="text-sm font-medium text-foreground">{agency}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
+        {/* Stats Section */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
             <Card key={index} className="text-center shadow-card hover:shadow-glow transition-all duration-300">
@@ -81,13 +108,13 @@ const TrustIndicators = () => {
         {/* Testimonials Section */}
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold text-foreground mb-4">
-            What Our Clients Say
+            Real Results From Real Agencies
           </h3>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="shadow-card">
+            <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -95,9 +122,15 @@ const TrustIndicators = () => {
                   ))}
                 </div>
                 <p className="text-foreground mb-4 italic">"{testimonial.text}"</p>
+                <div className="mb-4">
+                  <div className="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full">
+                    {testimonial.result}
+                  </div>
+                </div>
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                  <div className="text-sm text-primary font-medium">{testimonial.company}</div>
+                  <div className="text-xs text-muted-foreground">{testimonial.location}</div>
                 </div>
               </CardContent>
             </Card>
