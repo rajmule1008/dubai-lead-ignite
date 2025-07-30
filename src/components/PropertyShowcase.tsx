@@ -58,7 +58,7 @@ const StrategyShowcase = () => {
         {/* Main Headline */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            The Kratos Strategy That's Changing Everything
+            The LeadCare Strategy That's Changing Everything
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Stop wasting money on leads that go nowhere. Our proven 3-step system delivers qualified prospects who are ready to buy, not just browse.

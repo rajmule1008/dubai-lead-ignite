@@ -42,7 +42,7 @@ const TrustIndicators = () => {
       name: "Sarah Al Zahra",
       company: "Emirates Real Estate Group", 
       location: "Downtown Dubai",
-      text: "Kratos strategy completely transformed our business. We're now closing 40% more deals with half the effort.",
+      text: "LeadCare strategy completely transformed our business. We're now closing 40% more deals with half the effort.",
       rating: 5,
       result: "40% more closings"
     },

@@ -39,13 +39,13 @@ const Hero = () => {
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Sick of leads that 
               <span className="block text-white drop-shadow-lg">don't pick up or just say</span>
-              <span className="block text-primary drop-shadow-lg">"not interested"?</span>
+              <span className="block text-white drop-shadow-lg">"not interested"?</span>
             </h1>
             <p className="text-2xl mb-8 text-white font-semibold">
-              Get <span className="text-primary">3x better-qualified</span> real estate leads at <span className="text-primary">40% lower cost</span> using Kratos proven strategy
+              Get <span className="text-white">3x better-qualified</span> real estate leads at <span className="text-white">40% lower cost</span> using LeadCare proven strategy
             </p>
             <p className="text-lg mb-8 text-white/90">
-              The one secret tested by <span className="text-primary font-semibold">66+ agencies</span> that generated over <span className="text-primary font-semibold">1B AED</span> in real estate sales
+              The one secret tested by <span className="text-white font-semibold">66+ agencies</span> that generated over <span className="text-white font-semibold">1B AED</span> in real estate sales
             </p>
             <div className="grid grid-cols-3 gap-6 text-center mb-8">
               <div>
