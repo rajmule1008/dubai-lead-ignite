@@ -28,8 +28,15 @@ const Header = () => {
         {/* Main Header */}
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-primary">LeadCare UAE</h1>
-            <span className="ml-2 text-sm text-muted-foreground">Dubai Real Estate</span>
+            <img 
+              src="/lovable-uploads/adabb5a4-bb82-438d-944e-2e0777b825b6.png" 
+              alt="LeadCare UAE Logo" 
+              className="w-12 h-12 mr-3"
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-primary">LeadCare UAE</h1>
+              <span className="text-sm text-muted-foreground">Dubai Real Estate</span>
+            </div>
           </div>
           
           <nav className="hidden md:flex space-x-8">
